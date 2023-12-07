@@ -1,10 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-dom";
+import "./index.css";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+// PAGE COMPONENTs
+import MainPage from "./page/MainPage.tsx";
+
+const router = createBrowserRouter([
+    { path: "/", element: <MainPage /> },
+    { path: "about", element: <div>ABOUT PAGE</div> },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")!).render(<RouterProvider router={router} />);
