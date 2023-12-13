@@ -1,9 +1,9 @@
 import axios from "axios";
 
 function Login() {
-    const RESTAPI_KEY = "acdb4103432056b30aabac1971474425";
+    const RESTAPI_KEY = "";
 
-    const redirectURI = "http://localhost:8080/oauth";
+    const redirectURI = "http://localhost:5173/oauth";
 
     // oauth 요청 URL
     const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${RESTAPI_KEY}&redirect_uri=${redirectURI}&response_type=code`;
