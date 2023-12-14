@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { Map, useKakaoLoader, MapMarker } from "react-kakao-maps-sdk";
 
+interface IMap {
+    lat: number;
+    lng: number;
+}
+
 function MapComp() {
     const [loading, error] = useKakaoLoader({
         appkey: "", // 발급 받은 APPKEY
     });
 
-    const [position, setPosition] = useState();
+    const [position, setPosition] = useState<IMap>();
 
     return (
         <div>
