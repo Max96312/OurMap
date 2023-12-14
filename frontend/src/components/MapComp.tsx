@@ -3,7 +3,7 @@ import { Map, useKakaoLoader, MapMarker } from "react-kakao-maps-sdk";
 
 function MapComp() {
     const [loading, error] = useKakaoLoader({
-        appkey: "765795e625fb260225e5935df5fb3856", // 발급 받은 APPKEY
+        appkey: "", // 발급 받은 APPKEY
     });
 
     const [position, setPosition] = useState();
